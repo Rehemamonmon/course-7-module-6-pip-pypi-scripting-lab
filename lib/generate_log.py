@@ -1,4 +1,3 @@
-cat > lib/generate_log.py << 'EOF'
 from datetime import datetime
 
 
@@ -19,4 +18,3 @@ def generate_log(log_data):
 if __name__ == "__main__":
     sample_data = ["User logged in", "User updated profile", "Report exported"]
     generate_log(sample_data)
-EOF
