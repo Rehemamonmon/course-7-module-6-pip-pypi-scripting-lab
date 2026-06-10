@@ -5,14 +5,13 @@ def generate_log(log_data):
     if not isinstance(log_data, list):
         raise ValueError("log_data must be a list.")
 
-    filename = f"log_{datetime.now().strftime("%Y%m%d")}.txt"
+    filename = "log_" + datetime.now().strftime("%Y%m%d") + ".txt"
 
     with open(filename, "w") as file:
         for entry in log_data:
-            file.write(f"{entry}
-")
+            file.write(entry + "\n")
 
-    print(f"Log written to {filename}")
+    print("Log written to " + filename)
     return filename
 
 
