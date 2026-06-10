@@ -1,4 +1,3 @@
-cat > lib/generate_log.py << 'EOF'
 from datetime import datetime
 
 
@@ -6,11 +5,12 @@ def generate_log(log_data):
     if not isinstance(log_data, list):
         raise ValueError("log_data must be a list.")
 
-    filename = f"log_{datetime.now().strftime('%Y%m%d')}.txt"
+    filename = f"log_{datetime.now().strftime("%Y%m%d")}.txt"
 
     with open(filename, "w") as file:
         for entry in log_data:
-            file.write(f"{entry}\n")
+            file.write(f"{entry}
+")
 
     print(f"Log written to {filename}")
     return filename
@@ -19,4 +19,3 @@ def generate_log(log_data):
 if __name__ == "__main__":
     sample_data = ["User logged in", "User updated profile", "Report exported"]
     generate_log(sample_data)
-EOF
